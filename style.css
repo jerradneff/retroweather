@@ -9,18 +9,28 @@
     font-size: calc(min(100vh, 75vw) / 16);
     letter-spacing: 0.075em;
     line-height: 0.9;
-    /*-webkit-text-stroke: 0.05rem black;*/
     
+    /* Why can't outer stroke text be a thing? */
+    /* Note: 0.0433 = (sqrt(3) / 2) * 0.05, 0.354 = (sqrt(2) / 2) * 0.05 */
     text-shadow:
-    -0.05rem -0.05rem 0 #000,
-     0   -0.05rem 0 #000,
-     0.05rem -0.05rem 0 #000,
-     0.05rem  0   0 #000,
-     0.05rem  0.05rem 0 #000,
-     0    0.05rem 0 #000,
-    -0.05rem  0.05rem 0 #000,
-    -0.05rem  0   0 #000,
-    0.1rem 0.1rem 0 #000; /* vis shadow */
+    0.05em 0 0 black,
+    0.0433em 0.025em 0 black,
+    0.0354em 0.0354em 0 black,
+    0.025em 0.0433em 0 black,
+    0em 0.05em 0 black,
+    -0.025em 0.0433em 0 black,
+    -0.0354em 0.0354em 0 black,
+    -0.0433em 0.025em 0 black,
+    -0.05em 0em 0 black,
+    -0.0433em -0.025em 0 black,
+    -0.0354em -0.0354em 0 black,
+    -0.025em -0.0433em 0 black,
+    0em -0.05em 0 black,
+    0.025em -0.0433em 0 black,
+    0.0354em -0.0354em 0 black,
+    0.0433em -0.025em 0 black,
+    0.075em 0.075em 0.025em black
+    ;
 
     box-sizing: border-box;
 }
@@ -88,7 +98,7 @@ header {
     height: 1.25em;
     margin-left: 0.25em;
     width: auto;
-    filter: drop-shadow(0.1rem 0.1rem 0 #000);
+    filter: drop-shadow(0.075rem 0.075rem 0.025rem #000);
 }
 
 main {
