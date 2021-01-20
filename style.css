@@ -88,8 +88,7 @@ header {
 .timedate {
     position: absolute;
     right: 8%;
-    top: calc(var(--header-margin-top) + 1em);
-    font-size: 80%;
+    top: calc(var(--header-margin-top) + var(--header-height) - 1.3em);
     transform: scaleY(0.7);
 }
 
